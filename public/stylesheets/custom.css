@@ -1,0 +1,103 @@
+/* @override http://localhost:3000/stylesheets/custom.css?1303794397 */
+
+@font-face { font-family: TitlingGothic; src: url('fonts/TitlingGothicFBCondBold.otf'); } 
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+h1, h2, h3, h1 a {
+	font-family: "TitlingGothic", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+
+}
+
+h1#logo a {
+	text-decoration: none;
+	color: black;
+	margin: 0px;
+	padding: 0px;
+	font-size: .7em;
+	text-transform: uppercase;
+	width: 150px;
+	float: left;
+}
+
+body {
+	width: auto;
+	height: 100%;
+	position: absolute;
+}
+
+header {
+	height: 88px;
+	padding-top: 20px;
+	padding-left: 190px;
+	width: 100%;
+	background-color: #fff700;
+	position: fixed;
+	top: 30px;
+	z-index: 999;
+}
+header a {
+	color: white;
+	font-size: .8em;
+	text-decoration: none;
+}
+
+nav#main {
+	float: left;
+}
+
+nav#main ul li {
+	float: left;
+	width: 150px;
+	border-top: solid 1px black;
+	padding-top: 10px;
+	margin-right: 30px;
+	list-style-type: none;
+}
+
+header nav#categories {
+	position: fixed;
+	top: 200px;
+	left: 20px;
+}
+
+header nav#categories ul li a {
+	color: black;
+}
+
+#content {
+	height: 100%;
+	margin-top: 170px;
+	margin-left: 190px;
+	margin-right: 20px;
+	margin-bottom: 40px;
+}
+
+.work {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.work h4 {
+	font-size: .7em;
+}
+
+h2, #home {
+	clear: both;
+	padding-top: 190px;
+	margin-bottom: 10px;
+}
+
+#home {
+	height: 100%;
+}
+
+#home h3 {
+	font-size: 4em;
+}

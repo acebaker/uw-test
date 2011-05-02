@@ -1,0 +1,9 @@
+<h3><%= @project.title %></h3>
+<div id="images">
+	<%= image_tag("content/projects/large/#{@project.image_url}", :alt => @project.title )%>
+</div>
+<ul>
+<% for category in project.categories.all %>
+	<li><%= category.name %></li?>
+<% end %>
+</ul>
