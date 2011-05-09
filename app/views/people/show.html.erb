@@ -1,6 +1,11 @@
-<h3><%= @person.fname %> <%= @person.lname %></h3>
-<div id="images">
-	<%= image_tag("content/people/profiles/#{@person.image_url}", :alt => @person.fname )%>
-</div>
+<div id="person_info">
 
-<p><%= @person.about %></p>
+	<h2 id="person_name"><%= @person.fname %> <br /><%= @person.lname %></h2>
+	<div id="person_image">
+		<%= image_tag("content/people/profiles/#{@person.image_url}", :width => "150px" )%>
+	</div>
+	<p id="person_contact"><%= link_to @person.contact, "http://" + @person.contact %></p>
+
+</div> <!-- end #person_info -->
+
+<p id="person_about"><%= @person.about %></p>

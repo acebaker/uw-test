@@ -1,6 +1,8 @@
 /* @override http://localhost:3000/stylesheets/custom.css?1303794397 */
 
-@font-face { font-family: TitlingGothic; src: url('fonts/TitlingGothicFBCondBold.otf'); } 
+@font-face { font-family: TitlingGothicBold; src: url('fonts/TitlingGothicFBCondBold.otf'); } 
+
+@font-face { font-family: TitlingGothicMedium; src: url('fonts/TitlingGothicFBCompMedium.otf'); } 
 
 * {
 	margin: 0;
@@ -10,18 +12,18 @@
 }
 
 h1, h2, h3, h1 a {
-	font-family: "TitlingGothic", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-
+	font-family: "TitlingGothicBold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
 h1#logo a {
 	text-decoration: none;
-	color: black;
+	color: white;
 	margin: 0px;
 	padding: 0px;
 	font-size: .7em;
 	text-transform: uppercase;
-	width: 150px;
+	width: 100px;
+	margin-right: 50px;
 	float: left;
 }
 
@@ -32,19 +34,20 @@ body {
 }
 
 header {
-	height: 88px;
-	padding-top: 20px;
+	height: 75px;
+	padding-top: 14px;
 	padding-left: 190px;
 	width: 100%;
 	background-color: #fff700;
 	position: fixed;
-	top: 30px;
+	top: 24px;
 	z-index: 999;
 }
 header a {
 	color: black;
 	font-size: .8em;
 	text-decoration: none;
+	font-weight:  bold;
 }
 
 nav#main {
@@ -60,9 +63,20 @@ nav#main ul li {
 	list-style-type: none;
 }
 
+nav#main ul li:hover {
+	border-top: solid 4px;
+	padding-top: 7px;
+	border-color: black;
+}
+
+nav#main ul li:active {
+	border-top: solid 4px black;
+	padding-top: 7px;
+}
+
 header nav#categories {
 	position: fixed;
-	top: 200px;
+	top: 160px;
 	left: 20px;
 }
 
@@ -72,7 +86,7 @@ header nav#categories ul li a {
 
 #content {
 	height: 100%;
-	margin-top: 170px;
+	margin-top: 0px;
 	margin-left: 190px;
 	margin-right: 20px;
 	margin-bottom: 40px;
@@ -90,8 +104,9 @@ header nav#categories ul li a {
 
 h2, #home {
 	clear: both;
-	padding-top: 190px;
+	padding-top: 130px;
 	margin-bottom: 10px;
+	border-top: 1px solid #fff700;
 }
 
 #home {
@@ -100,4 +115,48 @@ h2, #home {
 
 #home h3 {
 	font-size: 4em;
+}
+
+#person_info {
+	position: fixed;
+	width: 150px;
+	top: 160px;
+	left: 20px;
+}
+
+h2#person_name {
+	padding-top: 10px;
+	padding-bottom: 6px;
+	border-top: 1px solid #fff700;
+	border-bottom: 1px solid #fff700;
+}
+
+#person_image {
+	margin-top: 30px;
+}
+
+#person_contact {
+	margin-top: 20px;
+}
+
+#person_about {
+	padding-top: 160px;
+	font-size: 3em;
+}
+
+h3.subhead {
+	padding-top: 160px;
+	font-size: 2em;
+	font-style: italic;
+	font-family: Georgia, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+h2.focalpoint {
+	font-size: 12em;
+	color: #fff700;
+	text-transform: uppercase;
+	padding-top: 40px;
+	line-height: 160px;
+	font-family: "TitlingGothicMedium", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	border-bottom: 1px solid #fff700;
 }

@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   def index
+    @title = "Work"
     @projects = Project.all
     @navs = Category.all.sort! { |a,b| a.name.downcase <=> b.name.downcase }
     
