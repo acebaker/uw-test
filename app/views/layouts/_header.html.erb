@@ -13,6 +13,8 @@
 			<% if defined?(@navs).nil? %>
 				<%= print "var is not defined\n" %>
 			<% else %>
+				<li><a href='#all' class="scroll">All</a></li>
+			
 				<% @navs.each do |nav| %>
 				<li><a href='/#<%= nav.name.downcase %>' class="scroll"><%= nav.name %></a></li>
 				<% end %>
