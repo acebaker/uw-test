@@ -42,7 +42,7 @@ header {
 	z-index: 999;
 }
 header a {
-	color: white;
+	color: black;
 	font-size: .8em;
 	text-decoration: none;
 }
