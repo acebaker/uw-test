@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   def index
     @projects = Project.all
+    @navs = Category.all.sort! { |a,b| a.name.downcase <=> b.name.downcase }
     
     respond_to do |format|
       format.html # index.html.erb

@@ -1,25 +1,22 @@
 <header>
-	<h1 id="logo"><a href="#home" class="scroll">UW <br />Design <br />2011</a></h1>
+	<h1 id="logo"><%= link_to "UW Design 2011", root_path %></h1>
 	<nav id="main">
 		<ul>
-			<li><a href="#work" class="scroll">Work</a></li>
-			<li><a href="#people" class="scroll">People</a></li>
-			<li><a href="#showinfo" class="scroll">Show Info</a></li>
+			<li><%= link_to "Work", root_path %></li>
+			<li><%= link_to "People", people_path %></li>
+			<li><%= link_to "Show Info", show_information_path %></li>
 			<li><%= link_to "About UW Design", about_uw_design_path %></li>
 		</ul>
 	</nav>
 	<nav id="categories">
 		<ul>
-			<li><a href="#capstones" class="scroll">Capstones</a></li>
-			<li><a href="#exhibitions" class="scroll">Exhibitions</a></li>
-			<li><a href="#identity" class="scroll">Identity</a></li>
-			<li><a href="#infographics" class="scroll">Infographics</a></li>
-			<li><a href="#interaction" class="scroll">Interaction</a></li>
-			<li><a href="#posters" class="scroll">Posters</a></li>
-			<li><a href="#prototypes" class="scroll">Prototypes</a></li>
-			<li><a href="#research" class="scroll">Research</a></li>
-			<li><a href="#videos" class="scroll">Videos</a></li>
-			<li><a href="#websites" class="scroll">Websites</a></li>
+			<% if defined?(@navs).nil? %>
+				<%= print "var is not defined\n" %>
+			<% else %>
+				<% @navs.each do |nav| %>
+				<li><a href='/#<%= nav.name.downcase %>' class="scroll"><%= nav.name %></a></li>
+				<% end %>
+			<% end %>
 		</ul>
-	</nav>
+	</nav><!-- end #categories -->
 </header>

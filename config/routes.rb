@@ -1,8 +1,11 @@
 UwTest::Application.routes.draw do
   resources :projects
+  resources :categories
+  resources :people
   
   match '/about_uw_design', :to => 'pages#about_uw_design'
   match '/show_information', :to => 'pages#show_information'
+  match '/catlist', :to => 'pages#catlist'
   
   root :to => 'projects#index'
   

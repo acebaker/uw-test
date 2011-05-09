@@ -2,8 +2,8 @@
 <div id="images">
 	<%= image_tag("content/projects/large/#{@project.image_url}", :alt => @project.title )%>
 </div>
-<ul>
-<% for category in project.categories.all %>
-	<li><%= category.name %></li?>
+<h4>See more projects in:<br />
+<% @project.categories.each do |category| %>
+<li><a href='/#<%= category.name.downcase %>' class="scroll"><%= category.name %> Design</a></li>
 <% end %>
-</ul>
+</h4>

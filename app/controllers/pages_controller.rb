@@ -11,4 +11,8 @@ class PagesController < ApplicationController
     @title = "Show Information"
   end
   
+  def catlist
+    @title = "Categories Cats"
+    @navs = Category.all.sort! { |a,b| a.name.downcase <=> b.name.downcase }
+  end
 end
