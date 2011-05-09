@@ -41,7 +41,7 @@ header {
 	background-color: #fff700;
 	position: fixed;
 	top: 24px;
-	z-index: 999;
+	z-index: 9999;
 }
 header a {
 	color: black;
@@ -96,6 +96,7 @@ header nav#categories ul li a {
 	float: left;
 	margin-right: 10px;
 	margin-bottom: 20px;
+	position: relative;
 }
 
 .work h4 {
@@ -129,6 +130,27 @@ h2#person_name {
 	padding-bottom: 6px;
 	border-top: 1px solid #fff700;
 	border-bottom: 1px solid #fff700;
+}
+
+h4.person_name {
+	position: relative;
+	margin-top: -40px;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	background-color: black;
+	color: white;
+	z-index: 999;
+}
+h4.person_name li a {
+	padding-left: 10px;
+	z-index: 999;
+	text-decoration: none;
+	color: white;
+}
+h4.person_name:hover {
+	background-color: #fff700;
 }
 
 #person_image {
