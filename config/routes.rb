@@ -5,9 +5,9 @@ UwTest::Application.routes.draw do
   
   match '/about_uw_design', :to => 'pages#about_uw_design'
   match '/show_information', :to => 'pages#show_information'
-  match '/catlist', :to => 'pages#catlist'
+
   
-  root :to => 'projects#index'
+  #root :to => 'projects#index'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

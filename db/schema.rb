@@ -10,23 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110509035200) do
+ActiveRecord::Schema.define(:version => 20110511162220) do
 
-  create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+# Could not dump table "categories" because of following StandardError
+#   Unknown type '' for column 'nav_name'
 
   create_table "categories_projects", :id => false, :force => true do |t|
     t.decimal "project_id"
     t.decimal "category_id"
   end
 
-  create_table "majors", :force => true do |t|
-    t.text "name"
-    t.text "long_name"
+  create_table "circles", :force => true do |t|
+    t.string "circle_content"
   end
+
+  create_table "images_people", :id => false, :force => true do |t|
+    t.integer "profile_image_id"
+    t.integer "person_id"
+  end
+
+# Could not dump table "majors" because of following StandardError
+#   Unknown type '' for column 'nav_name'
 
   create_table "majors_people", :id => false, :force => true do |t|
     t.integer "major_id"
@@ -34,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20110509035200) do
   end
 
   create_table "people", :force => true do |t|
+    t.text   "image_url"
     t.string "fname"
     t.string "lname"
     t.string "contact"
